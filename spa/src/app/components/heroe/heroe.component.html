@@ -1,0 +1,15 @@
+<h1>Héroe <small>{{heroe.nombre | uppercase}}</small></h1>
+<hr>
+
+<div class="card-columns">
+    <div class="card mb-3 animated fadeIn fast mx-auto" style="width: 34rem;">
+        <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
+        <div class="card-body">
+            <h5 class="card-title">{{heroe.nombre}}</h5>
+            <p class="card-text">{{heroe.bio}}.</p>
+            <p class="card-text"><small class="text-muted">{{heroe.aparicion | date:'y'}}</small></p>
+            <img *ngIf="heroe.casa == 'Marvel'" src="assets/img/A-64.png" alt="" width="30" height="24">
+            <img *ngIf="heroe.casa == 'DC'" src="assets/img/dc.png" alt="" width="30" height="24">
+        </div>
+    </div>
+</div>
